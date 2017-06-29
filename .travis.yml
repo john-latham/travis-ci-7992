@@ -1,0 +1,15 @@
+dist: trusty
+sudo: false
+language: groovy
+jdk:
+  - oraclejdk8
+
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+
+script:
+- mysql -e 'show variables'
